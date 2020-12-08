@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Cairo", sans-serif;
+  background-color: #e3e4db;
+}
+
+.container {
+  display: flex;
+  max-width: 1300px;
+  width: 95%;
+  height: 95vh;
+  margin: 1rem auto;
+  background-size: cover;
+}
+
+.cities-container {
+  width: 300px;
+  background-color: #383b53;
+  padding: 0 15px;
+  color: #fff;
+}
+
+.cities-container h3 {
+  margin-top: 2rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.clear-history {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 50px;
+  background-color: #bfc0c0;
+  font-size: 1.1rem;
+  color: #383b53;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.clear-history:hover {
+  background-color: #d4d4d4;
+}
+
+.cities {
+  list-style: none;
+  height: 500px;
+  overflow: auto;
+  margin-top: 0.5rem;
+}
+
+.cities:empty + button {
+  display: none;
+}
+
+.city {
+  display: block;
+  font-size: 1.1rem;
+  text-transform: capitalize;
+  padding: 2px 7px;
+  cursor: pointer;
+  border-left: 4px solid transparent;
+  transition: all 0.5s ease;
+}
+
+.city:hover {
+  border-left: 4px solid #bfc0c0;
+}
+
+.city:not(:last-of-type) {
+  margin-bottom: 5px;
+}
+
+.content {
+  width: 100%;
+  background-image: linear-gradient(
+      to bottom right,
+      rgba(128, 128, 128, 0.575),
+      rgba(0, 0, 0, 0.418)
+    ),
+    url("https://cdn.pixabay.com/photo/2017/02/01/22/02/mountain-landscape-2031539__340.jpg");
+  background-size: cover;
+}
+
+.header {
+  padding: 13px;
+  background-color: #66717e;
+}
+
+.header h3 {
+  letter-spacing: 2px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.form {
+  height: 46.7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #bfc0c0;
+  margin: 1rem 5px 5px 5px;
+  border-radius: 50px;
+  position: relative;
+}
+
+.form input,
+.form button {
+  outline: none;
+  font-size: 1.1rem;
+  border: none;
+}
+
+.form input {
+  width: 90%;
+  background-color: transparent;
+  padding-right: 45px;
+  color: #fff;
+}
+
+.form input::placeholder {
+  opacity: 0.3;
+}
+
+.form button {
+  position: absolute;
+  right: -2px;
+  width: 27%;
+  height: 105%;
+  border-radius: 50px;
+  background-color: #bfc0c0;
+  color: white;
+  cursor: pointer;
+}
+
+.weather {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card {
+  width: 350px;
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.466);
+  color: #fff;
+  padding: 10px;
+}
+
+.temp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 50%;
+}
+
+.temp h3 {
+  font-size: 5rem;
+  font-weight: 300;
+  position: relative;
+  margin-top: -19px;
+}
+
+.temp h3 sup {
+  font-size: 17px;
+  position: absolute;
+  top: 29px;
+  right: -10px;
+}
+
+.secondary-info {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.secondary-info img {
+  width: 80px;
+  height: 80px;
+}
+
+.forecast-container {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.forecast-container h4 {
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+  color: #fff;
+  font-size: 2.1rem;
+  font-weight: 400;
+}
+
+.forecast {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.forecast:empty + h4 {
+  display: none;
+}
+
+.forecast-card {
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+  background-color: #bfc0c0b7;
+  align-items: center;
+  padding: 10px;
+  margin-right: 8px;
+  font-size: 1.1rem;
+}
+
+.forecast-card img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
