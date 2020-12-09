@@ -51,7 +51,7 @@ ul.addEventListener("click", async function (e) {
 
 async function getWeatherData(city) {
   const apiKey = "02202a6ebc2cd24ba06290741876caed";
-  const urlOne = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric
+  const urlOne = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric
   `;
   try {
     const res = await fetch(urlOne);
